@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Survival Kit</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <h1>Hackathon Survival Kit</h1>
+        </div>
+
+        <section>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#team-analysis">Team Analysis</a></li>
+                <li><a href="#project-recommendation">Project Recommendation</a></li>
+                <li><a href="#role-assignment">Role Assignment</a></li>
+                <li><a href="#timeline-generator">Timeline Generator</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </section>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="moto">
+                <h2>Plan Better <br> Build Smarter <br> Win Together</h2>
+                <p>Everything your team needs to survive and win any Hackathon</p>
+                <a href="#team-analysis" class="btn-primary">Start Planning</a>
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Team Analysis</h3>
+                    <p>Analyze skills, Strengths and Weakness</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Project Recommendation</h3>
+                    <p>Find the best Project Ideas based on domain and time</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Role Assignment</h3>
+                    <p>Assign the perfect Roles to your teammates</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Timeline Generator</h3>
+                    <p>Get a smart Timeline for your Developement</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Presentation Checklist</h3>
+                    <p>Prepare a winning Pesentation</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="team-analysis">
+            <div class="sec-header">
+                <h2>Team Skill Analysis</h2>
+                <p>Select the skill available in your team</p>
+            </div>
+
+            <div class="section-content">
+                <form id="team-analysis-form">
+                    <div class="form-group">
+                        <label for="team-size">Team Size</label>
+                        <select id="team-size" name="team-size">
+                            <option value="1">1 Member</option>
+                            <option value="2">2 Member</option>
+                            <option value="3">3 Member</option>
+                            <option value="4" selected>4 Member</option>
+                            <option value="5">5 Member</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <legend>Select Skills</legend>
+                        <label><input type="checkbox" name="skills" value=" HTML/CSS"> HTML/CSS </label>
+                        <label><input type="checkbox" name="skills" value=" JavaScript"> JavaScript </label>
+                        <label><input type="checkbox" name="skills" value=" UI/UX"> UI/UX </label>
+                        <label><input type="checkbox" name="skills" value=" Database"> Database </label>
+                        <label><input type="checkbox" name="skills" value=" AI/ML"> AI/ML </label>
+                        <label><input type="checkbox" name="skills" value=" Presentation"> Presentation </label>
+                    </div>
+                    <button type="button" id="analyze-team-btn" class="btn-primary">Analyze Team</button>
+                </form>
+
+                <div id="analyze-result" class="result-box">
+                    <h3>Analysis Result</h3>
+                    <div class="strengths">
+                        <h4>Strengths</h4>
+                        <ul id="strength-list">
+                            <li> <!--JS HERE ANISHKA --> </li>
+                        </ul>
+                    </div>
+                    <div class="weaknesses">
+                        <h4>Weaknesses</h4>
+                        <ul id="weaknesses-list">
+                            <li><!-- JS HERE ANISHKA--></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="project-recommendation">
+            <div class="sec-header">
+                <h2>Project Recommendation</h2>
+                <p>Get project Ideas based on domain and time</p>
+            </div>
+
+            <div class="section-content">
+                <form id="project-rec-form">
+                    <div class="form-group">
+                        <label for="domain">Select Domain</label>
+                        <select id="domain" name="domain">
+                            <option value="Web Developement">Web Developement</option>
+                            <option value="Education">Education</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="AI">AI</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time-available">Time Available</label>
+                        <select id="time-available" name="time-available">
+                            <option value="24 Hours">24 Hours</option>
+                            <option value="48 Hours">48 Hours</option>
+                            <option value="7 Days">7 Days</option>
+                        </select>
+                    </div>
+                    <button type="button" id="get-recommendation-btn" class="btn-primary">Get Recommendation</button>
+                </form>
+
+                <div id="rec-result" class="result-box">
+                    <h3 id="project-title">Smart Attendance System</h3>
+                    <div class="project=meta">
+                        <p><strong>Difficulty: </strong> <span id="project-difficulty">Medium</span> </p>
+                        <p><strong>Tech Stack: </strong> <span id="project-tech-stack">HTML, CSS, JavaScript</span> </p>
+                    </div>
+
+                    <div class="project-features">
+                        <div>
+                            <h4>Must-Have Features</h4>
+                            <ul id="must-have-features">
+                                <li>User Authentication</li>
+                                <li>Attendance Tracking</li>
+                                <li>Dashboard</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Optional Features </h4>
+                            <ul id="optional-features">
+                                <li>Charts and Reports</li>
+                                <li>Export to CSV</li>
+                                <li>Email Notifications</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="role-assignment">
+            <div class="sec-header">
+                <h2>Role Assignment</h2>
+                <p>Add your team members and thwir skills</p>
+            </div>
+
+            <div class="section-content">
+                <form id="add-member-form">
+                    <legend>Add Member</legend>
+                    <div class="form-group">
+                        <label for="member-name">Enter Member Name: </label>
+                        <input type="text" id="member-name" name="member-name" placeholder="E.g Anishka">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="member-skill">Select Primary Skill: </label>
+                        <select id="member-skill" name="member-skill">
+                            <option value="HTML/CSS">HTML/CSS</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="UI/UX">UI/UX</option>
+                            <option value="Database">Database</option>
+                            <option value="AI/ML">AI/ML</option>
+                            <option value="Presentation">Presentation</option>
+                        </select>
+
+                    </div>
+                    <button type="button" id="add-member-btn" class="btn-secondary">Add Member</button>
+                </form>
+
+                <div class="role-assignment-result">
+                    <div class="team-members">
+                        <h3>Team Members</h3>
+                        <ul id="members-list">
+                            <li>No members added yet</li>
+                        </ul>
+                    </div>
+                    <div class="suggested-roles">
+                        <h3>Suggested Roles</h3>
+                        <ul id="role-list">
+                            <li>Add members to see role suggestions</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+        
+
+        <section id="timeline-generator">
+            <div class="sec-header">
+               <h3>Development Timeline GEnerator</h3> 
+               <p>Get a smart timeline based on hackathon duration</p>
+            </div>
+
+            <div class="section-content">
+                <form id="timeline-form">
+                    <div class="form-group">
+                        <label for="timeline-duration">Select Duration</label>
+                        <select id="timeline-duration" name="timeline-duration">
+                            <option value="24 Hours">24 Hours</option>
+                            <option value="48 Hours" selected>48 Hours</option>
+                            <option value="7 Days">7 Days</option>
+                        </select>
+                    </div>
+                    <button type="button" id="generate-timeline-btn" class="btn-primary">Generate Timeline</button>
+                </form>
+
+                <div id="timeline-result">
+                    <h3>Generated Schedule</h3>
+                    <ul id="timeline-schedule">
+                        <li>0-4 Hours: Planning and Idea</li>
+                        <li>4-12 Hours: UI Design</li>
+                        <li>12-24 Hours: Core Development</li>
+                        <li>24-36 Hours: Testing and Debugging</li>
+                        <li>36-48 Hours: Presentation Preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <div class="section-header">
+            <h3>About Hackathon Survival Kit</h3>
+            <p>Hackathon Survival Kit is built to help student teams plan better, build smarter and present like champions. Instead of simply recommending careers, it assists teams in planning projects, identifying missing skills, assigning roles, generating timelines, and preparing presentations.</p>
+            
+        </div>
+
+        <div class="section-header">
+            <h3>Built with</h3>
+            <ul id="tech-stack">
+                <li>HTML by Shivam</li>
+                <li>CSS by Aksh</li>
+                <li>JavaScript by Anishka</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="foot">
+            <span>Made with 🤍 by HNCC Students</span>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
