@@ -1,0 +1,770 @@
+/* my css file for hackathon survival kit project */
+/* made by Aksh */
+/* updated theme - slate dark + lime green with glows */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0b1120;
+    color: #cbd5e1;
+}
+
+
+/* ---- header ---- */
+
+header {
+    background-color: #a3e635;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid rgba(163, 230, 53, 0.15);
+    /* tried adding a glow under header, looks cool */
+    box-shadow: 0 2px 20px rgba(163, 230, 53, 0.05);
+}
+
+#logo h1 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    max-width: 120px;
+    line-height: 1.4;
+    /* glow on the logo text */
+    text-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+}
+
+header section ul {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+header section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 7px 13px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+header section ul li a:hover {
+    color: #0b1120;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* home section */
+
+#home {
+    padding: 65px 0 50px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.moto h2 {
+    font-size: 44px;
+    font-weight: 800;
+    color: #f1f5f9;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+/* i made "Smarter" lime green with a glow */
+.moto h2 span {
+    color: #a3e635;
+    text-shadow: 0 0 24px rgba(163, 230, 53, 0.45);
+}
+
+.moto p {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* buttons */
+.btn-primary {
+    background-color: #a3e635;
+    color: #0b1120;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    /* glow on the button */
+    box-shadow: 0 0 18px rgba(163, 230, 53, 0.35);
+}
+
+.btn-primary:hover {
+    background-color: #bef264;
+    box-shadow: 0 0 28px rgba(163, 230, 53, 0.55);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #a3e635;
+    padding: 10px 20px;
+    border: 1.5px solid #a3e635;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(163, 230, 53, 0.15);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(163, 230, 53, 0.1);
+    box-shadow: 0 0 18px rgba(163, 230, 53, 0.3);
+}
+
+/* feature cards */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 55px;
+}
+
+.feature-card {
+    background: #111827;
+    border-radius: 12px;
+    padding: 20px 14px;
+    text-align: center;
+    border: 1px solid #1e293b;
+    /* position relative so i can add the top line with ::before */
+    position: relative;
+    overflow: hidden;
+}
+
+/* lime green line on top of each card - learned this trick from youtube */
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #a3e635, transparent);
+}
+
+.feature-card:hover {
+    border-color: rgba(163, 230, 53, 0.35);
+    box-shadow: 0 0 20px rgba(163, 230, 53, 0.1);
+    transform: translateY(-2px);
+    transition: all 0.2s;
+}
+
+.feature-card h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 7px;
+}
+
+.feature-card p {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+
+/* main content wrapper */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 60px 24px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #1e293b;
+    margin: 45px 0;
+    /* making hr relative so i can put lime line in center */
+    position: relative;
+}
+
+/* small lime green line in center of hr - looks really nice */
+hr::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -1px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #a3e635;
+    box-shadow: 0 0 10px rgba(163, 230, 53, 0.5);
+}
+
+
+/* all inner sections */
+
+section {
+    padding: 8px 0;
+}
+
+.sec-header {
+    margin-bottom: 25px;
+}
+
+.sec-header h2 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-bottom: 4px;
+}
+
+/* making first word of heading lime green */
+.sec-header h2 span {
+    color: #a3e635;
+}
+
+/* timeline uses h3 so styling it same way */
+.sec-header h3 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-bottom: 4px;
+}
+
+.sec-header h3 span {
+    color: #a3e635;
+}
+
+.sec-header p {
+    font-size: 13.5px;
+    color: #475569;
+    margin-top: 4px;
+}
+
+/* two column layout */
+.section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+
+/* forms */
+
+form {
+    background: #0f1a2e;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 26px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* lime green gradient line on top of form - same trick as cards */
+form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a3e635, #4ade80, #a3e635);
+}
+
+form legend {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #1e293b;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #e2e8f0;
+    background-color: #060d1a;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group select:focus {
+    border-color: #a3e635;
+    /* soft glow when you click the select */
+    box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.1);
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #1e293b;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #e2e8f0;
+    background-color: #060d1a;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #a3e635;
+    box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.1);
+}
+
+/* checkboxes in a grid */
+#team-analysis-form .form-group:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+}
+
+#team-analysis-form .form-group:nth-child(2) legend {
+    grid-column: 1 / -1;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+#team-analysis-form .form-group:nth-child(2) label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: #a3e635;
+    cursor: pointer;
+}
+
+
+/* result boxes */
+
+.result-box {
+    background: #0f1a2e;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 24px 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* same lime green top line on result boxes */
+.result-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a3e635, #4ade80, #a3e635);
+}
+
+.result-box h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e2e8f0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1e293b;
+    margin-bottom: 16px;
+}
+
+/* strengths and weaknesses */
+
+.strengths h4 {
+    color: #a3e635;
+    font-size: 13px;
+    margin-bottom: 9px;
+    /* subtle glow on strengths heading */
+    text-shadow: 0 0 10px rgba(163, 230, 53, 0.3);
+}
+
+.weaknesses {
+    margin-top: 16px;
+}
+
+.weaknesses h4 {
+    color: #f87171;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+#strength-list,
+#weaknesses-list {
+    list-style: none;
+}
+
+#strength-list li {
+    font-size: 13px;
+    color: #94a3b8;
+    padding: 3px 0;
+}
+
+#strength-list li::before {
+    content: "✓ ";
+    color: #a3e635;
+    font-weight: bold;
+}
+
+#weaknesses-list li {
+    font-size: 13px;
+    color: #94a3b8;
+    padding: 3px 0;
+}
+
+#weaknesses-list li::before {
+    content: "✕ ";
+    color: #f87171;
+    font-weight: bold;
+}
+
+
+/* project recommendation result */
+
+#rec-result h3 {
+    font-size: 16px;
+}
+
+.project\=meta p {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+/* lime green badge for difficulty */
+#project-difficulty {
+    background: rgba(163, 230, 53, 0.12);
+    color: #a3e635;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 20px;
+    border: 1px solid rgba(163, 230, 53, 0.3);
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(163, 230, 53, 0.2);
+}
+
+#project-tech-stack {
+    font-size: 13px;
+    color: #475569;
+}
+
+.project-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.project-features h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+.project-features ul {
+    list-style: none;
+}
+
+.project-features ul li {
+    font-size: 13px;
+    color: #475569;
+    padding: 3px 0;
+}
+
+.project-features ul li::before {
+    content: "• ";
+    color: #a3e635;
+}
+
+
+/* role assignment section */
+
+.role-assignment-result {
+    background: #0f1a2e;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 24px 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* same top line */
+.role-assignment-result::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a3e635, #4ade80, #a3e635);
+}
+
+.role-assignment-result h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 12px;
+}
+
+.team-members {
+    margin-bottom: 20px;
+}
+
+.suggested-roles {
+    margin-bottom: 10px;
+}
+
+#members-list,
+#role-list {
+    list-style: none;
+}
+
+#members-list li,
+#role-list li {
+    font-size: 13px;
+    color: #475569;
+    padding: 6px 0;
+    border-bottom: 1px solid #111827;
+}
+
+#members-list li:last-child,
+#role-list li:last-child {
+    border-bottom: none;
+}
+
+
+/* timeline section */
+
+#timeline-result {
+    background: #0f1a2e;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 24px 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* same top line again lol */
+#timeline-result::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a3e635, #4ade80, #a3e635);
+}
+
+#timeline-result h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 16px;
+}
+
+#timeline-schedule {
+    list-style: none;
+}
+
+/* vertical line for timeline */
+#timeline-schedule li {
+    font-size: 13px;
+    color: #94a3b8;
+    padding: 9px 0 9px 18px;
+    border-left: 2px solid #1e293b;
+    margin-bottom: 6px;
+    position: relative;
+}
+
+#timeline-schedule li::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    position: absolute;
+    left: -7px;
+    top: 13px;
+}
+
+/* glowing colored dots - each one different color */
+#timeline-schedule li:nth-child(1)::before {
+    background-color: #a3e635;
+    box-shadow: 0 0 8px rgba(163, 230, 53, 0.6);
+}
+
+#timeline-schedule li:nth-child(2)::before {
+    background-color: #34d399;
+    box-shadow: 0 0 8px rgba(52, 211, 153, 0.5);
+}
+
+#timeline-schedule li:nth-child(3)::before {
+    background-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+#timeline-schedule li:nth-child(4)::before {
+    background-color: #c084fc;
+    box-shadow: 0 0 8px rgba(192, 132, 252, 0.5);
+}
+
+#timeline-schedule li:nth-child(5)::before {
+    background-color: #f87171;
+    box-shadow: 0 0 8px rgba(248, 113, 113, 0.5);
+}
+
+
+/* about section */
+
+.section-header {
+    background: #0f1a2e;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 28px 26px;
+    margin-bottom: 18px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* same top line on about cards too */
+.section-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a3e635, #4ade80, #a3e635);
+}
+
+.section-header h3 {
+    font-size: 21px;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.8;
+}
+
+/* tech stack badges */
+#tech-stack {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+#tech-stack li {
+    background: rgba(163, 230, 53, 0.08);
+    color: #a3e635;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(163, 230, 53, 0.25);
+    box-shadow: 0 0 10px rgba(163, 230, 53, 0.1);
+}
+
+
+/* footer */
+
+footer {
+    background-color: #a3e635;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(163, 230, 53, 0.1);
+}
+
+
+/* responsive - same as before */
+
+@media (max-width: 900px) {
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-content {
+        grid-template-columns: 1fr;
+    }
+
+    .moto h2 {
+        font-size: 32px;
+    }
+
+}
+
+@media (max-width: 580px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 18px;
+    }
+
+    header section ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .moto h2 {
+        font-size: 26px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-features {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 0 14px 40px 14px;
+    }
+
+}
