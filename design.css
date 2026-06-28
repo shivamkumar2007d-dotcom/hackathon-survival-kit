@@ -1,6 +1,5 @@
 /* my css file for hackathon survival kit project */
 /* made by Aksh */
-/* updated theme - slate dark + lime green with glows */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
@@ -17,8 +16,6 @@ body {
 }
 
 
-/* ---- header ---- */
-
 header {
     background-color: #a3e635;
     display: flex;
@@ -29,7 +26,6 @@ header {
     top: 0;
     z-index: 999;
     border-bottom: 1px solid rgba(163, 230, 53, 0.15);
-    /* tried adding a glow under header, looks cool */
     box-shadow: 0 2px 20px rgba(163, 230, 53, 0.05);
 }
 
@@ -39,7 +35,6 @@ header {
     font-weight: 800;
     max-width: 120px;
     line-height: 1.4;
-    /* glow on the logo text */
     text-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
 }
 
@@ -62,9 +57,6 @@ header section ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-
-/* home section */
-
 #home {
     padding: 65px 0 50px 0;
     max-width: 1100px;
@@ -80,8 +72,6 @@ header section ul li a:hover {
     line-height: 1.2;
     margin-bottom: 15px;
 }
-
-/* i made "Smarter" lime green with a glow */
 .moto h2 span {
     color: #a3e635;
     text-shadow: 0 0 24px rgba(163, 230, 53, 0.45);
@@ -92,8 +82,6 @@ header section ul li a:hover {
     color: #64748b;
     margin-bottom: 25px;
 }
-
-/* buttons */
 .btn-primary {
     background-color: #a3e635;
     color: #0b1120;
@@ -105,7 +93,6 @@ header section ul li a:hover {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    /* glow on the button */
     box-shadow: 0 0 18px rgba(163, 230, 53, 0.35);
 }
 
@@ -130,8 +117,6 @@ header section ul li a:hover {
     background-color: rgba(163, 230, 53, 0.1);
     box-shadow: 0 0 18px rgba(163, 230, 53, 0.3);
 }
-
-/* feature cards */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -145,12 +130,9 @@ header section ul li a:hover {
     padding: 20px 14px;
     text-align: center;
     border: 1px solid #1e293b;
-    /* position relative so i can add the top line with ::before */
     position: relative;
     overflow: hidden;
 }
-
-/* lime green line on top of each card - learned this trick from youtube */
 .feature-card::before {
     content: '';
     position: absolute;
@@ -180,9 +162,6 @@ header section ul li a:hover {
     color: #475569;
     line-height: 1.5;
 }
-
-
-/* main content wrapper */
 main {
     max-width: 1100px;
     margin: 0 auto;
@@ -193,11 +172,8 @@ hr {
     border: none;
     border-top: 1px solid #1e293b;
     margin: 45px 0;
-    /* making hr relative so i can put lime line in center */
     position: relative;
 }
-
-/* small lime green line in center of hr - looks really nice */
 hr::after {
     content: '';
     position: absolute;
@@ -209,9 +185,6 @@ hr::after {
     background: #a3e635;
     box-shadow: 0 0 10px rgba(163, 230, 53, 0.5);
 }
-
-
-/* all inner sections */
 
 section {
     padding: 8px 0;
@@ -227,13 +200,9 @@ section {
     color: #f1f5f9;
     margin-bottom: 4px;
 }
-
-/* making first word of heading lime green */
 .sec-header h2 span {
     color: #a3e635;
 }
-
-/* timeline uses h3 so styling it same way */
 .sec-header h3 {
     font-size: 25px;
     font-weight: 800;
@@ -250,16 +219,11 @@ section {
     color: #475569;
     margin-top: 4px;
 }
-
-/* two column layout */
 .section-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 22px;
 }
-
-
-/* forms */
 
 form {
     background: #0f1a2e;
@@ -269,8 +233,6 @@ form {
     position: relative;
     overflow: hidden;
 }
-
-/* lime green gradient line on top of form - same trick as cards */
 form::before {
     content: '';
     position: absolute;
@@ -315,7 +277,6 @@ form legend {
 
 .form-group select:focus {
     border-color: #a3e635;
-    /* soft glow when you click the select */
     box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.1);
 }
 
@@ -335,8 +296,6 @@ form legend {
     border-color: #a3e635;
     box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.1);
 }
-
-/* checkboxes in a grid */
 #team-analysis-form .form-group:nth-child(2) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -369,9 +328,6 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-
-/* result boxes */
-
 .result-box {
     background: #0f1a2e;
     border: 1px solid #1e293b;
@@ -380,8 +336,6 @@ input[type="checkbox"] {
     position: relative;
     overflow: hidden;
 }
-
-/* same lime green top line on result boxes */
 .result-box::before {
     content: '';
     position: absolute;
@@ -401,13 +355,10 @@ input[type="checkbox"] {
     margin-bottom: 16px;
 }
 
-/* strengths and weaknesses */
-
 .strengths h4 {
     color: #a3e635;
     font-size: 13px;
     margin-bottom: 9px;
-    /* subtle glow on strengths heading */
     text-shadow: 0 0 10px rgba(163, 230, 53, 0.3);
 }
 
@@ -450,9 +401,6 @@ input[type="checkbox"] {
     font-weight: bold;
 }
 
-
-/* project recommendation result */
-
 #rec-result h3 {
     font-size: 16px;
 }
@@ -462,8 +410,6 @@ input[type="checkbox"] {
     color: #64748b;
     margin-bottom: 5px;
 }
-
-/* lime green badge for difficulty */
 #project-difficulty {
     background: rgba(163, 230, 53, 0.12);
     color: #a3e635;
@@ -510,9 +456,6 @@ input[type="checkbox"] {
     color: #a3e635;
 }
 
-
-/* role assignment section */
-
 .role-assignment-result {
     background: #0f1a2e;
     border: 1px solid #1e293b;
@@ -521,8 +464,6 @@ input[type="checkbox"] {
     position: relative;
     overflow: hidden;
 }
-
-/* same top line */
 .role-assignment-result::before {
     content: '';
     position: absolute;
@@ -566,9 +507,6 @@ input[type="checkbox"] {
     border-bottom: none;
 }
 
-
-/* timeline section */
-
 #timeline-result {
     background: #0f1a2e;
     border: 1px solid #1e293b;
@@ -577,8 +515,6 @@ input[type="checkbox"] {
     position: relative;
     overflow: hidden;
 }
-
-/* same top line again lol */
 #timeline-result::before {
     content: '';
     position: absolute;
@@ -599,8 +535,6 @@ input[type="checkbox"] {
 #timeline-schedule {
     list-style: none;
 }
-
-/* vertical line for timeline */
 #timeline-schedule li {
     font-size: 13px;
     color: #94a3b8;
@@ -619,8 +553,6 @@ input[type="checkbox"] {
     left: -7px;
     top: 13px;
 }
-
-/* glowing colored dots - each one different color */
 #timeline-schedule li:nth-child(1)::before {
     background-color: #a3e635;
     box-shadow: 0 0 8px rgba(163, 230, 53, 0.6);
@@ -646,9 +578,6 @@ input[type="checkbox"] {
     box-shadow: 0 0 8px rgba(248, 113, 113, 0.5);
 }
 
-
-/* about section */
-
 .section-header {
     background: #0f1a2e;
     border: 1px solid #1e293b;
@@ -661,8 +590,6 @@ input[type="checkbox"] {
     position: relative;
     overflow: hidden;
 }
-
-/* same top line on about cards too */
 .section-header::before {
     content: '';
     position: absolute;
@@ -685,8 +612,6 @@ input[type="checkbox"] {
     color: #475569;
     line-height: 1.8;
 }
-
-/* tech stack badges */
 #tech-stack {
     list-style: none;
     display: flex;
@@ -706,9 +631,6 @@ input[type="checkbox"] {
     box-shadow: 0 0 10px rgba(163, 230, 53, 0.1);
 }
 
-
-/* footer */
-
 footer {
     background-color: #a3e635;
     color: #ffffff;
@@ -718,9 +640,6 @@ footer {
     margin-top: 10px;
     border-top: 1px solid rgba(163, 230, 53, 0.1);
 }
-
-
-/* responsive - same as before */
 
 @media (max-width: 900px) {
 
