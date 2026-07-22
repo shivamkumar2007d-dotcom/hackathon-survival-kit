@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Hackathon Survival Kit JavaScript loaded successfully.");
 
-    // =====================================================
-    // 1. TEAM SKILL ANALYSIS
-    // =====================================================
-
+   
+    // TEAM SKILL ANALYSIS
+    
     const analyzeTeamBtn = document.getElementById("analyze-team-btn");
     const teamSizeInput = document.getElementById("team-size");
     const strengthList = document.getElementById("strength-list");
@@ -174,9 +173,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // =====================================================
-    // 2. PROJECT RECOMMENDATION ENGINE
-    // =====================================================
+  
+    //  PROJECT RECOMMENDATION ENGINE
+   
 
     const projectIdeas = {
 
@@ -516,9 +515,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // =====================================================
-    // 3. ROLE ASSIGNMENT
-    // =====================================================
+  
+    //  ROLE ASSIGNMENT
+  
 
     const addMemberBtn =
         document.getElementById("add-member-btn");
@@ -760,9 +759,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // =====================================================
-    // 4. DEVELOPMENT TIMELINE GENERATOR
-    // =====================================================
+  
+    //  DEVELOPMENT TIMELINE GENERATOR
+
 
     const timelines = {
 
@@ -848,10 +847,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // =====================================================
-    // 5. COMMON FUNCTIONS
-    // =====================================================
-
+   
+    //  COMMON FUNCTIONS
+  
     function renderList(elementId, items) {
 
         const listElement =
